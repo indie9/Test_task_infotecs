@@ -1,0 +1,213 @@
+html {
+  --lh: 25px; /*отвечает за высоту линии, нужно при обрезке*/
+}
+
+/*стили кнопок*/
+button { 
+  text-decoration: none;
+  display: inline-block;
+  height: 35px;
+  width: 150px;
+  line-height: 35px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+  padding-bottom: 5px ;
+}
+#change-table button {
+  width: 50px;
+  font-weight: 900;
+  font-size: 20px;
+ 
+}
+button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-7px);
+}
+
+
+
+
+/*стили ячеек с описанием устанавливаем высоту блока равную двум высотам линии, и добавляем многоточие*/
+.mystyle {
+  --max-lines: 2;
+  display: block;
+  position: relative;
+  line-height: var(--lh);
+  
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 20px;
+  
+  height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  text-align: justify;
+  /*добавляем многоточие для браузеров на базе webkit*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-right: 1rem;  
+}
+ /*ниже приведен более кросбраузерный вариант, добавляем многоточие в конец блока, и если содержимое не выходит 
+ за рамки добавляем блок цвета родителя который закроет собой многоточие*/
+/*
+.mystyle::before {
+  position: absolute;
+  content: "...";
+  inset-block-end: 0; 
+  inset-inline-end: 0;  
+}
+
+.mystyle::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; 
+    width: 1rem;
+    height: 5rem;
+   
+    background: antiquewhite ; 
+  } 
+*/
+ /*стили фона*/
+body{
+  background-image: url('https://kartinkin.net/uploads/posts/2021-01/1611109965_28-p-besshovnii-serii-fon-dlya-saita-36.jpg');
+  background-size: 100%;
+	background-attachment: fixed;
+	max-width: 100%;
+	max-height: auto;
+  font-size: 20px;
+}
+ /*стили основного контейнера*/
+.main-container{
+  max-width: 60%;
+  margin: auto;
+  padding: 20px 100px 100px 100px;
+  background-color:rgb(241, 241, 233);
+  border-radius: 5px;
+}
+
+ /*стили таблиц нав-баров и ячеек, ругулируют высоты и пр., для корректного отображения*/
+
+#nav-bar{
+  margin: 10px; 
+}
+
+.trheight{
+  height: 60px;
+  border: none
+  
+}
+.tdheight{
+  height: 60px;
+  min-width: 120px;
+  text-align: center;
+}
+
+
+#cnhgtop{
+  height: 70px;
+  border: none; 
+}
+
+#nav-bar{
+  display: flex;
+  flex-direction: row;
+}
+
+#container-table{
+  display: flex;
+  flex-direction: row;
+}
+#main-table{
+  margin-right: 30px;
+  width: 50vw;
+  border-collapse: collapse;
+  background-color: antiquewhite;
+  border: solid 2px black;
+}
+ /*каждый воторй ряд в таблице выделим цветом для читабельности*/
+#main-table tr:nth-child(2n) {
+  background: rgb(226, 211, 192);
+}
+
+#form{
+  background-color: #F1DCC9;
+  padding: 20px;
+  border-radius: 10px;;
+}
+
+
+#change-table{
+  color: antiquewhite;
+  border-collapse: collapse;
+  border-spacing: 0;
+	border: 0;
+
+}
+#change-table td{
+  height: 40x;
+  
+}
+
+
+#name-label{
+  height: 20px;
+  padding: 5px;
+}
+#last-name-label{
+  height: 20px;
+  padding: 5px;
+}
+#textComent{
+  height: 100px;
+  width: 100%;
+  padding: 5px;
+}
+#eyeDrop{
+  height: 40px;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+
+#foot-bar{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  font-size: 30px;
+  justify-content: center ;
+}
+
+.item{
+  margin: 0 5px;
+}
+
+ /*выделим редактируемую строку*/
+.big-border{
+border:  dashed 3px #6C2D2C;
+}
+
+ /*добавим стрелки при сортировке*/
+.up::after{
+content: "\25BC";
+}
+.down::after{
+content: "\25B2";
+}
+
+ /*при присвоении этого класса обьект прячется*/
+.hide{
+display: none;
+}
+

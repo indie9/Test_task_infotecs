@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<title>Николай Галанов тестовое задание</title>
+	 	<meta charset="utf-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css" />	
+	</head>
+	<body >
+		<div class="main-container">
+			<h1>Николай Галанов тестовое задание(с доп. условиями)</h1>
+			<div id="nav-bar" > 					
+				<button class="item" onclick="hide(0)">Имя</button>
+				<button class="item" onclick="hide(1)">Фамилия</button>
+				<button class="item" onclick="hide(2)">Описание</button>
+				<button class="item" onclick="hide(3)">Цвет глаз</button>
+			</div>
+			<div id="container-table">		
+				<div>					
+				<table border="1" id="main-table" >
+					<tr height="20">
+						<td onclick="sortTable(0)">Имя</td>
+						<td onclick="sortTable(1)">Фамилия</td>
+						<td onclick="sortTable(2)">Описание</td>
+						<td onclick="sortTable(3)" >Цвет глаз</td>
+					</tr>						
+				</table>
+				</div>
+				<div>	
+				<table border="1" id="change-table"  >
+					<tr height="20">
+						<td id="cnhgtop"></td>
+					</tr>
+				</table>
+				</div>
+				<div id="form">
+					<div>
+						<label ><p>Имя</p><input id="name-label" type="text"/></label>
+					</div>
+					<div>
+						<label ><p>Фамилия</p><input id="last-name-label" type="text" /></label>
+					</div>	
+					<div>
+						<label ><p>Описание</p><textarea id="textComent" tabindex="8" name="text"> </textarea></label>
+					</div>
+					<div id="select">
+						<p>Цвет глаз</p>
+						<select  name="clreye" id="eyeDrop" >
+							<option value="None" disabled selected>Выберите цвет глаз</option>
+							<option value="red">Красный</option>
+							<option value="brown">Карие</option>
+							<option value="orange">Оранжевый</option>
+							<option value="yellow">Желтый</option>
+							<option value="green">Зеленый</option>
+							<option value="blue">Голубой</option>
+							<option value="purple">Фиолетовый</option>						
+						</select>
+					</div>
+					<div>
+						<button  id="submit">Принять</button> <button  id="cancel">Отмена</button>	
+					</div>
+				</div>
+			</div>
+			<div id="foot-bar">
+				<button class="item" onclick="backpage()">Назад</button>
+				<div class="item">Строки:</div><div id="screen"></div>
+				<button class="item" onclick="nextpage()">Далее</button>
+			</div>		
+		</div>					
+		<script src="js/script.js" ></script>
+	</body>
+</html>
